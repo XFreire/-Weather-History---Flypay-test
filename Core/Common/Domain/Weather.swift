@@ -16,4 +16,5 @@ struct Weather {
     let city: String
     let latitude: Double
     let longitude: Double
+    let icon: String
 }
