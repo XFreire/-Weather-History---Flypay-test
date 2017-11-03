@@ -26,6 +26,7 @@
 		ACB840041FAC8300007D2E89 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */; };
 		ACB840051FAC8300007D2E89 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFC1FAC82DA007D2E89 /* RxSwift.framework */; };
 		ACB840141FAC885F007D2E89 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840131FAC885F007D2E89 /* Core.swift */; };
+		ACB840181FAC88C2007D2E89 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840171FAC88C2007D2E89 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		ACB83FFF1FAC82DA007D2E89 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = SOURCE_ROOT; };
 		ACB840121FAC8853007D2E89 /* WebService.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WebService.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACB840131FAC885F007D2E89 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		ACB840171FAC88C2007D2E89 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		AC682EE71FA7B6AF00DC85CE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ACB840151FAC88A2007D2E89 /* Common */,
 				AC682EE81FA7B6AF00DC85CE /* Core.h */,
 				AC682EE91FA7B6AF00DC85CE /* Info.plist */,
 				ACB840131FAC885F007D2E89 /* Core.swift */,
@@ -232,6 +235,22 @@
 				ACB840121FAC8853007D2E89 /* WebService.playground */,
 			);
 			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		ACB840151FAC88A2007D2E89 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ACB840161FAC88AC007D2E89 /* Domain */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ACB840161FAC88AC007D2E89 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ACB840171FAC88C2007D2E89 /* Weather.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB840181FAC88C2007D2E89 /* Weather.swift in Sources */,
 				ACB840141FAC885F007D2E89 /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
