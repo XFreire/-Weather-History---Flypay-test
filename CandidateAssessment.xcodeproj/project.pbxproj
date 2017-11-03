@@ -33,6 +33,10 @@
 		ACB840231FAC8DF4007D2E89 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840221FAC8DF4007D2E89 /* WeatherResponse.swift */; };
 		ACB840251FAC97CC007D2E89 /* Weather+WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840241FAC97CC007D2E89 /* Weather+WeatherResponse.swift */; };
 		ACB840271FAC9D65007D2E89 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840261FAC9D65007D2E89 /* WebServiceAssembly.swift */; };
+		ACB8402C1FACA1D2007D2E89 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8402B1FACA1D2007D2E89 /* CLLocationManager+Rx.swift */; };
+		ACB8402E1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8402D1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift */; };
+		ACB840301FACA35E007D2E89 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8402F1FACA35E007D2E89 /* GeolocationService.swift */; };
+		ACB840321FACAEEC007D2E89 /* GeolocationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840311FACAEEC007D2E89 /* GeolocationServiceAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,11 @@
 		ACB840221FAC8DF4007D2E89 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		ACB840241FAC97CC007D2E89 /* Weather+WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+WeatherResponse.swift"; sourceTree = "<group>"; };
 		ACB840261FAC9D65007D2E89 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
+		ACB840281FAC9F04007D2E89 /* GeolocationService.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GeolocationService.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ACB8402B1FACA1D2007D2E89 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		ACB8402D1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
+		ACB8402F1FACA35E007D2E89 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
+		ACB840311FACAEEC007D2E89 /* GeolocationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationServiceAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,9 +223,10 @@
 		AC682EE71FA7B6AF00DC85CE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				ACB8401E1FAC89C7007D2E89 /* Config */,
+				ACB8402A1FACA1BC007D2E89 /* GeolocationService */,
 				ACB840191FAC8914007D2E89 /* WebService */,
 				ACB840151FAC88A2007D2E89 /* Common */,
+				ACB8401E1FAC89C7007D2E89 /* Config */,
 				AC682EE81FA7B6AF00DC85CE /* Core.h */,
 				AC682EE91FA7B6AF00DC85CE /* Info.plist */,
 				ACB840131FAC885F007D2E89 /* Core.swift */,
@@ -247,6 +257,7 @@
 		ACB840111FAC8832007D2E89 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				ACB840281FAC9F04007D2E89 /* GeolocationService.playground */,
 				ACB840121FAC8853007D2E89 /* WebService.playground */,
 			);
 			path = Playgrounds;
@@ -287,6 +298,17 @@
 				ACB8401F1FAC89E1007D2E89 /* Keys.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		ACB8402A1FACA1BC007D2E89 /* GeolocationService */ = {
+			isa = PBXGroup;
+			children = (
+				ACB8402B1FACA1D2007D2E89 /* CLLocationManager+Rx.swift */,
+				ACB8402D1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift */,
+				ACB8402F1FACA35E007D2E89 /* GeolocationService.swift */,
+				ACB840311FACAEEC007D2E89 /* GeolocationServiceAssembly.swift */,
+			);
+			path = GeolocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,9 +555,13 @@
 				ACB840181FAC88C2007D2E89 /* Weather.swift in Sources */,
 				ACB840231FAC8DF4007D2E89 /* WeatherResponse.swift in Sources */,
 				ACB840271FAC9D65007D2E89 /* WebServiceAssembly.swift in Sources */,
+				ACB8402E1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
+				ACB840301FACA35E007D2E89 /* GeolocationService.swift in Sources */,
 				ACB840251FAC97CC007D2E89 /* Weather+WeatherResponse.swift in Sources */,
 				ACB8401B1FAC895E007D2E89 /* WebServiceConfiguration.swift in Sources */,
 				ACB8401D1FAC8964007D2E89 /* WebService.swift in Sources */,
+				ACB840321FACAEEC007D2E89 /* GeolocationServiceAssembly.swift in Sources */,
+				ACB8402C1FACA1D2007D2E89 /* CLLocationManager+Rx.swift in Sources */,
 				ACB840141FAC885F007D2E89 /* Core.swift in Sources */,
 				ACB840211FAC8AD1007D2E89 /* Endpoint.swift in Sources */,
 			);
