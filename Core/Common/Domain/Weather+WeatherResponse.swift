@@ -9,20 +9,15 @@
 import Foundation
 
 extension Weather {
-    init?(weatherResponse: WeatherResponse) {
-        guard let name = weatherResponse.description.first?.name,
-        let description = weatherResponse.description.first?.description,
-        let icon = weatherResponse.description.first?.icon else {
-            return nil
-        }
-        
+    init(weatherResponse: WeatherResponse) {
+
         self.identifier = weatherResponse.identifier
-        self.name = name
-        self.description = description
+        self.name = weatherResponse.description.first!.name
+        self.description = weatherResponse.description.first!.description
         self.date = String(weatherResponse.date)
         self.city = weatherResponse.city
         self.latitude = weatherResponse.coordinates.latitude
         self.longitude = weatherResponse.coordinates.longitude
-        self.icon = icon
+        self.icon = weatherResponse.description.first!.icon
     }
 }

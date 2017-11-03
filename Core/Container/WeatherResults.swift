@@ -32,10 +32,10 @@ internal final class WeatherResults: NSObject, WeatherResultsProtocol {
     }
     
     var list: [Weather] {
-        return resultsController.fetchedObjects
-            .flatMap{ $0.forEach{
-                Weather(managedObject: $0) }
-            }
+        guard let list = resultsController.fetchedObjects else {
+            return []
+        }
+        return list.map{ Weather(managedObject: $0) }
     }
 
     
