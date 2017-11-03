@@ -25,6 +25,7 @@
 		ACB840011FAC82DA007D2E89 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */; };
 		ACB840041FAC8300007D2E89 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */; };
 		ACB840051FAC8300007D2E89 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFC1FAC82DA007D2E89 /* RxSwift.framework */; };
+		ACB840141FAC885F007D2E89 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840131FAC885F007D2E89 /* Core.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
 		ACB83FFE1FAC82DA007D2E89 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = SOURCE_ROOT; };
 		ACB83FFF1FAC82DA007D2E89 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = SOURCE_ROOT; };
+		ACB840121FAC8853007D2E89 /* WebService.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WebService.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ACB840131FAC885F007D2E89 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 		65EAF68D1EF7FF0A00ABA736 = {
 			isa = PBXGroup;
 			children = (
+				ACB840111FAC8832007D2E89 /* Playgrounds */,
 				ACB83FFB1FAC82B7007D2E89 /* Frameworks */,
 				65EAF6981EF7FF0B00ABA736 /* CandidateAssessment */,
 				65EAF6AD1EF7FF0B00ABA736 /* CandidateAssessmentTests */,
@@ -197,6 +201,7 @@
 			children = (
 				AC682EE81FA7B6AF00DC85CE /* Core.h */,
 				AC682EE91FA7B6AF00DC85CE /* Info.plist */,
+				ACB840131FAC885F007D2E89 /* Core.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -219,6 +224,14 @@
 				ACB83FFE1FAC82DA007D2E89 /* RxTest.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACB840111FAC8832007D2E89 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				ACB840121FAC8853007D2E89 /* WebService.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +347,7 @@
 					};
 					AC682EE51FA7B6AF00DC85CE = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					AC682EED1FA7B6AF00DC85CE = {
@@ -461,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB840141FAC885F007D2E89 /* Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +640,7 @@
 		65EAF6B41EF7FF0B00ABA736 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -643,6 +659,7 @@
 		65EAF6B51EF7FF0B00ABA736 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -692,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -713,6 +731,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -724,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
