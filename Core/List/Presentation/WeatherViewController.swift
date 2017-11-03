@@ -15,6 +15,7 @@ final class WeatherViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet{
             tableView.register(WeatherCellTableViewCell.self)
+            tableView.rowHeight = 74
         }
     }
     
