@@ -32,6 +32,7 @@
 		ACB840211FAC8AD1007D2E89 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840201FAC8AD1007D2E89 /* Endpoint.swift */; };
 		ACB840231FAC8DF4007D2E89 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840221FAC8DF4007D2E89 /* WeatherResponse.swift */; };
 		ACB840251FAC97CC007D2E89 /* Weather+WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840241FAC97CC007D2E89 /* Weather+WeatherResponse.swift */; };
+		ACB840271FAC9D65007D2E89 /* WebServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840261FAC9D65007D2E89 /* WebServiceAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		ACB840201FAC8AD1007D2E89 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		ACB840221FAC8DF4007D2E89 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		ACB840241FAC97CC007D2E89 /* Weather+WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+WeatherResponse.swift"; sourceTree = "<group>"; };
+		ACB840261FAC9D65007D2E89 /* WebServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				ACB8401C1FAC8964007D2E89 /* WebService.swift */,
 				ACB840201FAC8AD1007D2E89 /* Endpoint.swift */,
 				ACB840221FAC8DF4007D2E89 /* WeatherResponse.swift */,
+				ACB840261FAC9D65007D2E89 /* WebServiceAssembly.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			files = (
 				ACB840181FAC88C2007D2E89 /* Weather.swift in Sources */,
 				ACB840231FAC8DF4007D2E89 /* WeatherResponse.swift in Sources */,
+				ACB840271FAC9D65007D2E89 /* WebServiceAssembly.swift in Sources */,
 				ACB840251FAC97CC007D2E89 /* Weather+WeatherResponse.swift in Sources */,
 				ACB8401B1FAC895E007D2E89 /* WebServiceConfiguration.swift in Sources */,
 				ACB8401D1FAC8964007D2E89 /* WebService.swift in Sources */,
