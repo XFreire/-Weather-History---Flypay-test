@@ -46,6 +46,9 @@
 		ACB840431FACC6CA007D2E89 /* Weather+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840421FACC6CA007D2E89 /* Weather+Persistable.swift */; };
 		ACB840461FACCB3B007D2E89 /* WeatherContainer+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840451FACCB3B007D2E89 /* WeatherContainer+List.swift */; };
 		ACB840481FACCF39007D2E89 /* WeatherContainerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840471FACCF39007D2E89 /* WeatherContainerAssembly.swift */; };
+		ACB8404D1FACD08B007D2E89 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8404A1FACD08B007D2E89 /* NibLoadableView.swift */; };
+		ACB8404E1FACD08B007D2E89 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8404B1FACD08B007D2E89 /* UITableView+Reusable.swift */; };
+		ACB8404F1FACD08B007D2E89 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8404C1FACD08B007D2E89 /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,9 @@
 		ACB840441FACCAEA007D2E89 /* Container.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Container.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACB840451FACCB3B007D2E89 /* WeatherContainer+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherContainer+List.swift"; sourceTree = "<group>"; };
 		ACB840471FACCF39007D2E89 /* WeatherContainerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainerAssembly.swift; sourceTree = "<group>"; };
+		ACB8404A1FACD08B007D2E89 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		ACB8404B1FACD08B007D2E89 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		ACB8404C1FACD08B007D2E89 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +293,7 @@
 		ACB840151FAC88A2007D2E89 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ACB840491FACD07D007D2E89 /* Utilities */,
 				ACB840161FAC88AC007D2E89 /* Domain */,
 			);
 			path = Common;
@@ -346,6 +353,16 @@
 				ACB840471FACCF39007D2E89 /* WeatherContainerAssembly.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		ACB840491FACD07D007D2E89 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ACB8404A1FACD08B007D2E89 /* NibLoadableView.swift */,
+				ACB8404C1FACD08B007D2E89 /* ReusableView.swift */,
+				ACB8404B1FACD08B007D2E89 /* UITableView+Reusable.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,6 +609,7 @@
 				ACB840411FACC665007D2E89 /* Persistable.swift in Sources */,
 				ACB840181FAC88C2007D2E89 /* Weather.swift in Sources */,
 				ACB840381FACC2FD007D2E89 /* WeatherResults.swift in Sources */,
+				ACB8404F1FACD08B007D2E89 /* ReusableView.swift in Sources */,
 				ACB840231FAC8DF4007D2E89 /* WeatherResponse.swift in Sources */,
 				ACB8403A1FACC39B007D2E89 /* TemporaryPersistentContainer.swift in Sources */,
 				ACB840481FACCF39007D2E89 /* WeatherContainerAssembly.swift in Sources */,
@@ -605,6 +623,8 @@
 				ACB8401D1FAC8964007D2E89 /* WebService.swift in Sources */,
 				ACB840321FACAEEC007D2E89 /* GeolocationServiceAssembly.swift in Sources */,
 				ACB8403D1FACC477007D2E89 /* Model.xcdatamodeld in Sources */,
+				ACB8404E1FACD08B007D2E89 /* UITableView+Reusable.swift in Sources */,
+				ACB8404D1FACD08B007D2E89 /* NibLoadableView.swift in Sources */,
 				ACB8402C1FACA1D2007D2E89 /* CLLocationManager+Rx.swift in Sources */,
 				ACB840461FACCB3B007D2E89 /* WeatherContainer+List.swift in Sources */,
 				ACB840361FACC28D007D2E89 /* WeatherContainer.swift in Sources */,
