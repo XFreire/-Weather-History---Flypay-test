@@ -37,6 +37,15 @@
 		ACB8402E1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8402D1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift */; };
 		ACB840301FACA35E007D2E89 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8402F1FACA35E007D2E89 /* GeolocationService.swift */; };
 		ACB840321FACAEEC007D2E89 /* GeolocationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840311FACAEEC007D2E89 /* GeolocationServiceAssembly.swift */; };
+		ACB840361FACC28D007D2E89 /* WeatherContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840351FACC28D007D2E89 /* WeatherContainer.swift */; };
+		ACB840381FACC2FD007D2E89 /* WeatherResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840371FACC2FD007D2E89 /* WeatherResults.swift */; };
+		ACB8403A1FACC39B007D2E89 /* TemporaryPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840391FACC39B007D2E89 /* TemporaryPersistentContainer.swift */; };
+		ACB8403D1FACC477007D2E89 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACB8403B1FACC477007D2E89 /* Model.xcdatamodeld */; };
+		ACB8403F1FACC53A007D2E89 /* WeatherEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8403E1FACC53A007D2E89 /* WeatherEntry.swift */; };
+		ACB840411FACC665007D2E89 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840401FACC665007D2E89 /* Persistable.swift */; };
+		ACB840431FACC6CA007D2E89 /* Weather+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840421FACC6CA007D2E89 /* Weather+Persistable.swift */; };
+		ACB840461FACCB3B007D2E89 /* WeatherContainer+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840451FACCB3B007D2E89 /* WeatherContainer+List.swift */; };
+		ACB840481FACCF39007D2E89 /* WeatherContainerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840471FACCF39007D2E89 /* WeatherContainerAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +132,16 @@
 		ACB8402D1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		ACB8402F1FACA35E007D2E89 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
 		ACB840311FACAEEC007D2E89 /* GeolocationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationServiceAssembly.swift; sourceTree = "<group>"; };
+		ACB840351FACC28D007D2E89 /* WeatherContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainer.swift; sourceTree = "<group>"; };
+		ACB840371FACC2FD007D2E89 /* WeatherResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResults.swift; sourceTree = "<group>"; };
+		ACB840391FACC39B007D2E89 /* TemporaryPersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryPersistentContainer.swift; sourceTree = "<group>"; };
+		ACB8403C1FACC477007D2E89 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		ACB8403E1FACC53A007D2E89 /* WeatherEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntry.swift; sourceTree = "<group>"; };
+		ACB840401FACC665007D2E89 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		ACB840421FACC6CA007D2E89 /* Weather+Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Persistable.swift"; sourceTree = "<group>"; };
+		ACB840441FACCAEA007D2E89 /* Container.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Container.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ACB840451FACCB3B007D2E89 /* WeatherContainer+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherContainer+List.swift"; sourceTree = "<group>"; };
+		ACB840471FACCF39007D2E89 /* WeatherContainerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContainerAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +242,7 @@
 		AC682EE71FA7B6AF00DC85CE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ACB840331FACAF2D007D2E89 /* Container */,
 				ACB8402A1FACA1BC007D2E89 /* GeolocationService */,
 				ACB840191FAC8914007D2E89 /* WebService */,
 				ACB840151FAC88A2007D2E89 /* Common */,
@@ -257,6 +277,7 @@
 		ACB840111FAC8832007D2E89 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				ACB840441FACCAEA007D2E89 /* Container.playground */,
 				ACB840281FAC9F04007D2E89 /* GeolocationService.playground */,
 				ACB840121FAC8853007D2E89 /* WebService.playground */,
 			);
@@ -276,6 +297,8 @@
 			children = (
 				ACB840171FAC88C2007D2E89 /* Weather.swift */,
 				ACB840241FAC97CC007D2E89 /* Weather+WeatherResponse.swift */,
+				ACB840421FACC6CA007D2E89 /* Weather+Persistable.swift */,
+				ACB840451FACCB3B007D2E89 /* WeatherContainer+List.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -309,6 +332,20 @@
 				ACB840311FACAEEC007D2E89 /* GeolocationServiceAssembly.swift */,
 			);
 			path = GeolocationService;
+			sourceTree = "<group>";
+		};
+		ACB840331FACAF2D007D2E89 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				ACB840351FACC28D007D2E89 /* WeatherContainer.swift */,
+				ACB840371FACC2FD007D2E89 /* WeatherResults.swift */,
+				ACB840391FACC39B007D2E89 /* TemporaryPersistentContainer.swift */,
+				ACB8403B1FACC477007D2E89 /* Model.xcdatamodeld */,
+				ACB8403E1FACC53A007D2E89 /* WeatherEntry.swift */,
+				ACB840401FACC665007D2E89 /* Persistable.swift */,
+				ACB840471FACCF39007D2E89 /* WeatherContainerAssembly.swift */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,16 +589,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB840411FACC665007D2E89 /* Persistable.swift in Sources */,
 				ACB840181FAC88C2007D2E89 /* Weather.swift in Sources */,
+				ACB840381FACC2FD007D2E89 /* WeatherResults.swift in Sources */,
 				ACB840231FAC8DF4007D2E89 /* WeatherResponse.swift in Sources */,
+				ACB8403A1FACC39B007D2E89 /* TemporaryPersistentContainer.swift in Sources */,
+				ACB840481FACCF39007D2E89 /* WeatherContainerAssembly.swift in Sources */,
 				ACB840271FAC9D65007D2E89 /* WebServiceAssembly.swift in Sources */,
+				ACB8403F1FACC53A007D2E89 /* WeatherEntry.swift in Sources */,
+				ACB840431FACC6CA007D2E89 /* Weather+Persistable.swift in Sources */,
 				ACB8402E1FACA2BF007D2E89 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				ACB840301FACA35E007D2E89 /* GeolocationService.swift in Sources */,
 				ACB840251FAC97CC007D2E89 /* Weather+WeatherResponse.swift in Sources */,
 				ACB8401B1FAC895E007D2E89 /* WebServiceConfiguration.swift in Sources */,
 				ACB8401D1FAC8964007D2E89 /* WebService.swift in Sources */,
 				ACB840321FACAEEC007D2E89 /* GeolocationServiceAssembly.swift in Sources */,
+				ACB8403D1FACC477007D2E89 /* Model.xcdatamodeld in Sources */,
 				ACB8402C1FACA1D2007D2E89 /* CLLocationManager+Rx.swift in Sources */,
+				ACB840461FACCB3B007D2E89 /* WeatherContainer+List.swift in Sources */,
+				ACB840361FACC28D007D2E89 /* WeatherContainer.swift in Sources */,
 				ACB840141FAC885F007D2E89 /* Core.swift in Sources */,
 				ACB840211FAC8AD1007D2E89 /* Endpoint.swift in Sources */,
 			);
@@ -953,6 +999,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ACB8403B1FACC477007D2E89 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACB8403C1FACC477007D2E89 /* Model.xcdatamodel */,
+			);
+			currentVersion = ACB8403C1FACC477007D2E89 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 65EAF68E1EF7FF0A00ABA736 /* Project object */;
 }
