@@ -41,29 +41,43 @@ final class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.view = self
+        
+        presenter.didUpdate = tableView.reloadData
+        
+        presenter.didUpdateCurrentWeather = { [weak self] weather in
+            self?.update(withCurrentWeather: weather)
+        }
         presenter.didLoad()
     }
 }
 
-extension WeatherViewController: WeatherListView {
+extension WeatherViewController {
+    
     func update(withCurrentWeather weather: Weather) {
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         let currentWeatherView = CurrentWeatherView.instantiate()
         currentWeatherPresenter.present(weather: weather, in: currentWeatherView)
+        
+        currentWeatherView.saveButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.presenter.didTapSaveWeather(weather)
+            })
+            .disposed(by: disposeBag)
         stackView.addArrangedSubview(currentWeatherView)
     }
-    
-    func update(with weathers: [Weather]) {
-        Observable.from(optional: weathers)
-            .bind(to: tableView.rx.items) { [weak self] tableView, _, weather in
-                let cell = tableView.dequeueReusableCell(WeatherCellTableViewCell.self)
-                self?.cellPresenter.present(weather: weather, in: cell)
-                
-                return cell
-            }
-            .disposed(by: disposeBag)
+}
 
+extension WeatherViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.numberOfWeathers
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(WeatherCellTableViewCell.self)
+        let weather = presenter.item(at: indexPath.item)
+        cellPresenter.present(weather: weather, in: cell)
+        
+        return cell
     }
     
     

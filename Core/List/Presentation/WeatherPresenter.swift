@@ -8,34 +8,54 @@
 
 import RxSwift
 
-protocol WeatherListView: class {
-    func update(withCurrentWeather: Weather)
-    func update(with weathers: [Weather])
-}
+
 
 final class WeatherPresenter {
-    weak var view: WeatherListView?
     
     private let repository: WeatherRepositoryProtocol
     private let container: WeatherContainerProtocol
-    
+    private lazy var results = container.all()
     private let disposeBag = DisposeBag()
+    
+    var didUpdate: () -> Void = {}
+
+    var didUpdateCurrentWeather: (Weather) -> Void = { _ in }
+    
+    var numberOfWeathers: Int {
+        return results.numberOfWeathers
+    }
+    
+    func item(at position: Int) -> Weather {
+        return results.weather(at: position)
+    }
     
     init(container: WeatherContainerProtocol, repository: WeatherRepositoryProtocol) {
         self.repository = repository
         self.container = container
+        
+        self.results.didUpdate = { [weak self] in
+            self?.didUpdate()
+        }
+        
+        
+        
     }
     
     func didLoad() {
         repository.weatherForCurrentPosition()
-            .subscribe(onNext: { [weak self] weather in
-                guard let `self` = self else { return }
-                self.view?.update(withCurrentWeather: weather)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { weather in
+                self.didUpdateCurrentWeather(weather)
             })
             .disposed(by: disposeBag)
-        
-        self.view?.update(with: container.all().list)
-        
-        
+    }
+    
+    func didTapSaveWeather(_ weather: Weather) {
+        container.save(weather: weather)
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                self.didUpdate()
+            })
+            .disposed(by: disposeBag)
     }
 }

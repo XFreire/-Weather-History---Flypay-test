@@ -15,6 +15,7 @@ extension Weather {
         self.name = weatherResponse.description.first!.name
         self.description = weatherResponse.description.first!.description
         self.date = String(weatherResponse.date)
+        
         self.city = weatherResponse.city
         self.latitude = weatherResponse.coordinates.latitude
         self.longitude = weatherResponse.coordinates.longitude

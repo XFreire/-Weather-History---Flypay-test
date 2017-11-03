@@ -12,6 +12,7 @@ final class CurrentWeatherPresenter {
     
     func present(weather: Weather, in view: CurrentWeatherView) {
         view.cityLabel.text = weather.city
+        view.descriptionLabel.text = weather.description.capitalized
         
     }
 }

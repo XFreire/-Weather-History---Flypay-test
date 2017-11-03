@@ -14,7 +14,7 @@ extension Weather: Persistable {
         self.identifier = managedObject.identifier
         self.name = managedObject.name
         self.description = managedObject.summary
-        self.date = String(managedObject.date)
+        self.date = managedObject.date
         self.city = managedObject.city
         self.latitude = managedObject.latitude
         self.longitude = managedObject.longitude
@@ -26,7 +26,7 @@ extension Weather: Persistable {
         entry.identifier = identifier
         entry.name = name
         entry.summary = description
-        entry.date = Double(date)!
+        entry.date = date
         entry.city = city
         entry.latitude = latitude
         entry.longitude = longitude

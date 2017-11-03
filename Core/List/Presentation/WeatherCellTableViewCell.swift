@@ -9,8 +9,8 @@
 import UIKit
 
 final class WeatherCellTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
-    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
 }

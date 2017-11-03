@@ -15,4 +15,8 @@ final class WeatherContainerAssembly {
         return WeatherContainer.temporary()
     }
     
+    init() {
+        let _ = container.load().subscribe()
+    }
+    
 }

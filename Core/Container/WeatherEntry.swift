@@ -13,7 +13,7 @@ internal class WeatherEntry: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var summary: String
     @NSManaged var icon: String
-    @NSManaged var date: Double
+    @NSManaged var date: String
     @NSManaged var city: String
     @NSManaged var latitude: Double
     @NSManaged var longitude: Double
@@ -23,7 +23,7 @@ internal class WeatherEntry: NSManagedObject {
 extension WeatherEntry {
     static func defaultFetchRequest() -> NSFetchRequest<WeatherEntry> {
         let fetchRequest = NSFetchRequest<WeatherEntry>(entityName: "WeatherEntry")
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)] 
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)] 
         return fetchRequest
     }
 }

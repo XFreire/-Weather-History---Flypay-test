@@ -17,7 +17,10 @@ final class CellPresenter {
     
     func present(weather: Weather, in cell: WeatherCellTableViewCell) {
         cell.cityLabel.text = weather.city.uppercased()
-        cell.dateLabel.text = weather.date
+        let s = Date(timeIntervalSince1970: TimeInterval(exactly: Double(weather.date)!)!)
+        
+        cell.dateLabel.text = dateFormatter.string(from: s)
+        cell.descriptionLabel.text = weather.description.capitalized
         
     }
 }

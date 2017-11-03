@@ -8,10 +8,16 @@
 
 import Foundation
 
-final class ListAssembly {
-    private(set) lazy var webServiceAssembly: WebServiceAssembly = WebServiceAssembly()
-    private(set) lazy var geolocationAssembly = GeolocationServiceAssembly()
-    private(set) lazy var containerAssembly = WeatherContainerAssembly()
+final public class ListAssembly {
+    private let webServiceAssembly: WebServiceAssembly
+    private let geolocationAssembly: GeolocationServiceAssembly
+    private let containerAssembly: WeatherContainerAssembly
+    
+    init(webServiceAssembly: WebServiceAssembly, geolocationAssembly: GeolocationServiceAssembly, containerAssembly: WeatherContainerAssembly) {
+        self.webServiceAssembly = webServiceAssembly
+        self.geolocationAssembly = geolocationAssembly
+        self.containerAssembly = containerAssembly
+    }
     
     func presenter() -> WeatherPresenter {
         return WeatherPresenter(container: containerAssembly.container, repository: repository())
@@ -29,7 +35,7 @@ final class ListAssembly {
         return WeatherRepository(webService: webServiceAssembly.webService, geolocationService: geolocationAssembly.geolocationService)
     }
     
-    func viewController() -> UIViewController {
+    public func viewController() -> UIViewController {
         return WeatherViewController(presenter: presenter(), cellPresenter: cellPresenter(), currentWeatherPresenter: currentWeatherViewPresenter())
     }
     
