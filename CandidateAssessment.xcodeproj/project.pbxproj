@@ -12,7 +12,6 @@
 		65EAF6A41EF7FF0B00ABA736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EAF6A21EF7FF0B00ABA736 /* LaunchScreen.storyboard */; };
 		65EAF6AF1EF7FF0B00ABA736 /* CandidateAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF6AE1EF7FF0B00ABA736 /* CandidateAssessmentTests.swift */; };
 		AC682EEF1FA7B6AF00DC85CE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC682EE61FA7B6AF00DC85CE /* Core.framework */; };
-		AC682EF61FA7B6AF00DC85CE /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC682EF51FA7B6AF00DC85CE /* CoreTests.swift */; };
 		AC682EF81FA7B6AF00DC85CE /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AC682EE81FA7B6AF00DC85CE /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC682EFB1FA7B6AF00DC85CE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC682EE61FA7B6AF00DC85CE /* Core.framework */; };
 		AC682EFC1FA7B6AF00DC85CE /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC682EE61FA7B6AF00DC85CE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -61,6 +60,19 @@
 		ACE7FE991FADE456003057DE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE7FE981FADE456003057DE /* Kingfisher.framework */; };
 		ACE7FE9A1FADE46B003057DE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE7FE981FADE456003057DE /* Kingfisher.framework */; };
 		ACE7FE9C1FADE4BA003057DE /* ImageLoadingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7FE9B1FADE4BA003057DE /* ImageLoadingAssembly.swift */; };
+		ACE7FE9E1FADF33A003057DE /* ContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7FE9D1FADF33A003057DE /* ContainerTest.swift */; };
+		ACE7FE9F1FADF9F7003057DE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE7FE981FADE456003057DE /* Kingfisher.framework */; };
+		ACE7FEA01FADF9F7003057DE /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFF1FAC82DA007D2E89 /* RxBlocking.framework */; };
+		ACE7FEA11FADF9F7003057DE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */; };
+		ACE7FEA21FADF9F7003057DE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFC1FAC82DA007D2E89 /* RxSwift.framework */; };
+		ACE7FEA31FADF9F7003057DE /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB83FFE1FAC82DA007D2E89 /* RxTest.framework */; };
+		ACE7FEA51FADFA96003057DE /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACE7FE981FADE456003057DE /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE7FEA61FADFA96003057DE /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACB83FFF1FAC82DA007D2E89 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE7FEA71FADFA96003057DE /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE7FEA81FADFA96003057DE /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACB83FFC1FAC82DA007D2E89 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE7FEA91FADFA96003057DE /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACB83FFE1FAC82DA007D2E89 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE7FEAA1FADFAA1003057DE /* Core.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC682EE61FA7B6AF00DC85CE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE7FEAE1FAE0099003057DE /* WeatherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7FEAD1FAE0099003057DE /* WeatherTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +118,21 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACE7FEA41FADFA7D003057DE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ACE7FEAA1FADFAA1003057DE /* Core.framework in CopyFiles */,
+				ACE7FEA51FADFA96003057DE /* Kingfisher.framework in CopyFiles */,
+				ACE7FEA61FADFA96003057DE /* RxBlocking.framework in CopyFiles */,
+				ACE7FEA71FADFA96003057DE /* RxCocoa.framework in CopyFiles */,
+				ACE7FEA81FADFA96003057DE /* RxSwift.framework in CopyFiles */,
+				ACE7FEA91FADFA96003057DE /* RxTest.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -121,7 +148,6 @@
 		AC682EE81FA7B6AF00DC85CE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		AC682EE91FA7B6AF00DC85CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC682EEE1FA7B6AF00DC85CE /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC682EF51FA7B6AF00DC85CE /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		AC682EF71FA7B6AF00DC85CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACB83FFC1FAC82DA007D2E89 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
 		ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
@@ -171,6 +197,8 @@
 		ACE7FE961FADE31F003057DE /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		ACE7FE981FADE456003057DE /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
 		ACE7FE9B1FADE4BA003057DE /* ImageLoadingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingAssembly.swift; sourceTree = "<group>"; };
+		ACE7FE9D1FADF33A003057DE /* ContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTest.swift; sourceTree = "<group>"; };
+		ACE7FEAD1FAE0099003057DE /* WeatherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC682EEF1FA7B6AF00DC85CE /* Core.framework in Frameworks */,
+				ACE7FE9F1FADF9F7003057DE /* Kingfisher.framework in Frameworks */,
+				ACE7FEA01FADF9F7003057DE /* RxBlocking.framework in Frameworks */,
+				ACE7FEA11FADF9F7003057DE /* RxCocoa.framework in Frameworks */,
+				ACE7FEA21FADF9F7003057DE /* RxSwift.framework in Frameworks */,
+				ACE7FEA31FADF9F7003057DE /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +312,9 @@
 		AC682EF41FA7B6AF00DC85CE /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC682EF51FA7B6AF00DC85CE /* CoreTests.swift */,
 				AC682EF71FA7B6AF00DC85CE /* Info.plist */,
+				ACE7FE9D1FADF33A003057DE /* ContainerTest.swift */,
+				ACE7FEAD1FAE0099003057DE /* WeatherTest.swift */,
 			);
 			path = CoreTests;
 			sourceTree = "<group>";
@@ -519,6 +553,7 @@
 				AC682EEA1FA7B6AF00DC85CE /* Sources */,
 				AC682EEB1FA7B6AF00DC85CE /* Frameworks */,
 				AC682EEC1FA7B6AF00DC85CE /* Resources */,
+				ACE7FEA41FADFA7D003057DE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -561,6 +596,7 @@
 					AC682EED1FA7B6AF00DC85CE = {
 						CreatedOnToolsVersion = 9.0.1;
 						DevelopmentTeam = 8LNA9LB2Y8;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 65EAF6951EF7FF0B00ABA736;
 					};
@@ -728,7 +764,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC682EF61FA7B6AF00DC85CE /* CoreTests.swift in Sources */,
+				ACE7FEAE1FAE0099003057DE /* WeatherTest.swift in Sources */,
+				ACE7FE9E1FADF33A003057DE /* ContainerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1024,16 +1061,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = CoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.CoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CandidateAssessment.app/CandidateAssessment";
@@ -1045,10 +1088,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = CoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
