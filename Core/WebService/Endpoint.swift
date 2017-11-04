@@ -47,7 +47,7 @@ private extension Endpoint {
         case .weatherCoordinates:
             return "data/2.5/weather"
         case .image(let name):
-            return "img/2/\(name).png"
+            return "img/w/\(name).png"
             
         }
         

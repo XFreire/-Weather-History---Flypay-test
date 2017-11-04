@@ -57,6 +57,10 @@
 		ACB8406E1FACE248007D2E89 /* ListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8406D1FACE248007D2E89 /* ListAssembly.swift */; };
 		ACB840701FACE43C007D2E89 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8406F1FACE43C007D2E89 /* AppAssembly.swift */; };
 		ACB840721FACE463007D2E89 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB840711FACE463007D2E89 /* CoreAssembly.swift */; };
+		ACE7FE971FADE31F003057DE /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7FE961FADE31F003057DE /* ImageRepository.swift */; };
+		ACE7FE991FADE456003057DE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE7FE981FADE456003057DE /* Kingfisher.framework */; };
+		ACE7FE9A1FADE46B003057DE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE7FE981FADE456003057DE /* Kingfisher.framework */; };
+		ACE7FE9C1FADE4BA003057DE /* ImageLoadingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7FE9B1FADE4BA003057DE /* ImageLoadingAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +168,9 @@
 		ACB8406D1FACE248007D2E89 /* ListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAssembly.swift; sourceTree = "<group>"; };
 		ACB8406F1FACE43C007D2E89 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		ACB840711FACE463007D2E89 /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		ACE7FE961FADE31F003057DE /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		ACE7FE981FADE456003057DE /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
+		ACE7FE9B1FADE4BA003057DE /* ImageLoadingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +181,7 @@
 				AC682EFB1FA7B6AF00DC85CE /* Core.framework in Frameworks */,
 				ACB840011FAC82DA007D2E89 /* RxCocoa.framework in Frameworks */,
 				ACB840001FAC82DA007D2E89 /* RxSwift.framework in Frameworks */,
+				ACE7FE9A1FADE46B003057DE /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +198,7 @@
 			files = (
 				ACB840041FAC8300007D2E89 /* RxCocoa.framework in Frameworks */,
 				ACB840051FAC8300007D2E89 /* RxSwift.framework in Frameworks */,
+				ACE7FE991FADE456003057DE /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +261,7 @@
 		AC682EE71FA7B6AF00DC85CE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7FE951FADE2BE003057DE /* ImageLoading */,
 				ACB840731FACE531007D2E89 /* DI */,
 				ACB840551FACD18D007D2E89 /* List */,
 				ACB840331FACAF2D007D2E89 /* Container */,
@@ -278,6 +288,7 @@
 		ACB83FFB1FAC82B7007D2E89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7FE981FADE456003057DE /* Kingfisher.framework */,
 				ACB83FFF1FAC82DA007D2E89 /* RxBlocking.framework */,
 				ACB83FFD1FAC82DA007D2E89 /* RxCocoa.framework */,
 				ACB83FFC1FAC82DA007D2E89 /* RxSwift.framework */,
@@ -419,6 +430,15 @@
 				ACB840711FACE463007D2E89 /* CoreAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		ACE7FE951FADE2BE003057DE /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				ACE7FE961FADE31F003057DE /* ImageRepository.swift */,
+				ACE7FE9B1FADE4BA003057DE /* ImageLoadingAssembly.swift */,
+			);
+			path = ImageLoading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,10 +632,12 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -629,10 +651,12 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -673,7 +697,9 @@
 				ACB8403A1FACC39B007D2E89 /* TemporaryPersistentContainer.swift in Sources */,
 				ACB8406B1FACDB12007D2E89 /* WeatherRepository.swift in Sources */,
 				ACB8406E1FACE248007D2E89 /* ListAssembly.swift in Sources */,
+				ACE7FE971FADE31F003057DE /* ImageRepository.swift in Sources */,
 				ACB840481FACCF39007D2E89 /* WeatherContainerAssembly.swift in Sources */,
+				ACE7FE9C1FADE4BA003057DE /* ImageLoadingAssembly.swift in Sources */,
 				ACB840271FAC9D65007D2E89 /* WebServiceAssembly.swift in Sources */,
 				ACB8403F1FACC53A007D2E89 /* WeatherEntry.swift in Sources */,
 				ACB840431FACC6CA007D2E89 /* Weather+Persistable.swift in Sources */,

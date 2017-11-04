@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class CurrentWeatherView: UIView, NibLoadableView {
     private enum Constants {
@@ -14,8 +15,8 @@ final class CurrentWeatherView: UIView, NibLoadableView {
     }
     
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var iconView: UIImageView!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton! {
         didSet {
             saveButton.layer.borderWidth = 1
@@ -24,6 +25,8 @@ final class CurrentWeatherView: UIView, NibLoadableView {
             saveButton.titleLabel?.text = NSLocalizedString("Save", comment: "").uppercased()
         }
     }
+    
+    let disposeBag = DisposeBag()
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: UIViewNoIntrinsicMetric, height: Constants.height)

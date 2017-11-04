@@ -38,17 +38,26 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJY-AX-WHW">
-                        <rect key="frame" x="252.5" y="28.5" width="35.5" height="17"/>
+                        <rect key="frame" x="204.5" y="28" width="35.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOV-JU-Qj5">
+                        <rect key="frame" x="256" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="1gs-Xf-Jd1"/>
+                            <constraint firstAttribute="width" constant="40" id="Cnx-cu-BhJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZOV-JU-Qj5" secondAttribute="trailing" constant="8" id="Acr-aW-W4L"/>
+                    <constraint firstItem="ZOV-JU-Qj5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ckm-Dw-KXN"/>
+                    <constraint firstItem="ZOV-JU-Qj5" firstAttribute="leading" secondItem="sJY-AX-WHW" secondAttribute="trailing" constant="16" id="Gpk-Io-xyB"/>
                     <constraint firstItem="sJY-AX-WHW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ilt-k9-YTV"/>
                     <constraint firstItem="Tzl-04-cqK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fIg-JG-4dd"/>
                     <constraint firstItem="Tzl-04-cqK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uRE-pE-4rI"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="sJY-AX-WHW" secondAttribute="trailing" constant="16" id="wDr-wH-0h1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -56,6 +65,7 @@
                 <outlet property="cityLabel" destination="ugo-jZ-Lm3" id="uS9-92-q7k"/>
                 <outlet property="dateLabel" destination="sJY-AX-WHW" id="eeD-qJ-CZs"/>
                 <outlet property="descriptionLabel" destination="Cxh-eD-FmM" id="N8t-OV-4lX"/>
+                <outlet property="iconView" destination="ZOV-JU-Qj5" id="FB4-bd-R1p"/>
             </connections>
             <point key="canvasLocation" x="34" y="177"/>
         </tableViewCell>

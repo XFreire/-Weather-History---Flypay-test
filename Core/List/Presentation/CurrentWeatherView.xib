@@ -40,23 +40,24 @@
                     </constraints>
                     <state key="normal" title="SAVE"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-ol-13D">
-                    <rect key="frame" x="322" y="48" width="37" height="18"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PrX-vn-oBV">
+                    <rect key="frame" x="279" y="16" width="80" height="84"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="oVQ-8B-Oac"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.91881987783643937" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="h9I-yx-PI5" firstAttribute="top" secondItem="MwI-lc-2PY" secondAttribute="bottom" constant="8" id="1RD-cL-eBm"/>
                 <constraint firstItem="MwI-lc-2PY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="1gQ-bU-YKZ"/>
                 <constraint firstItem="MwI-lc-2PY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7Lv-XK-p0B"/>
+                <constraint firstItem="PrX-vn-oBV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h9I-yx-PI5" secondAttribute="trailing" constant="16" id="93A-zA-ZZ6"/>
                 <constraint firstItem="gXn-6Q-Gig" firstAttribute="top" secondItem="MwI-lc-2PY" secondAttribute="bottom" constant="8" id="Jza-5G-lFd"/>
-                <constraint firstItem="nzu-ol-13D" firstAttribute="centerY" secondItem="h9I-yx-PI5" secondAttribute="centerY" id="VwO-ho-LWt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nzu-ol-13D" secondAttribute="trailing" constant="16" id="b3V-f2-eF1"/>
+                <constraint firstItem="PrX-vn-oBV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Q7P-On-wpm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PrX-vn-oBV" secondAttribute="bottom" constant="16" id="ZgO-sb-Uv8"/>
                 <constraint firstItem="gXn-6Q-Gig" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="brY-6C-QR9"/>
-                <constraint firstItem="nzu-ol-13D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h9I-yx-PI5" secondAttribute="trailing" constant="16" id="fna-0E-tP8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PrX-vn-oBV" secondAttribute="trailing" constant="16" id="gVe-zP-K5n"/>
                 <constraint firstItem="yPd-C7-F1U" firstAttribute="centerX" secondItem="MwI-lc-2PY" secondAttribute="centerX" id="sja-WB-Wf2"/>
                 <constraint firstItem="h9I-yx-PI5" firstAttribute="leading" secondItem="gXn-6Q-Gig" secondAttribute="trailing" constant="8" id="u0J-75-nrB"/>
                 <constraint firstItem="yPd-C7-F1U" firstAttribute="top" secondItem="gXn-6Q-Gig" secondAttribute="bottom" constant="11" id="uGz-rE-0Oy"/>
@@ -65,7 +66,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="cityLabel" destination="h9I-yx-PI5" id="cZ6-tZ-WzT"/>
-                <outlet property="descriptionLabel" destination="nzu-ol-13D" id="HfU-HC-ssq"/>
+                <outlet property="iconView" destination="PrX-vn-oBV" id="uW1-EQ-kOE"/>
                 <outlet property="saveButton" destination="yPd-C7-F1U" id="dHW-Ll-pWm"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-95"/>

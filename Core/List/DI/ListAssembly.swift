@@ -12,11 +12,13 @@ final public class ListAssembly {
     private let webServiceAssembly: WebServiceAssembly
     private let geolocationAssembly: GeolocationServiceAssembly
     private let containerAssembly: WeatherContainerAssembly
+    private let imageLoadingAssembly: ImageLoadingAssembly
     
-    init(webServiceAssembly: WebServiceAssembly, geolocationAssembly: GeolocationServiceAssembly, containerAssembly: WeatherContainerAssembly) {
+    init(webServiceAssembly: WebServiceAssembly, geolocationAssembly: GeolocationServiceAssembly, containerAssembly: WeatherContainerAssembly, imageLoadingAssembly: ImageLoadingAssembly) {
         self.webServiceAssembly = webServiceAssembly
         self.geolocationAssembly = geolocationAssembly
         self.containerAssembly = containerAssembly
+        self.imageLoadingAssembly = imageLoadingAssembly
     }
     
     func presenter() -> WeatherPresenter {
@@ -24,11 +26,11 @@ final public class ListAssembly {
     }
     
     func cellPresenter() -> CellPresenter {
-        return CellPresenter(dateFormatter: webServiceAssembly.dateFormatter)
+        return CellPresenter(dateFormatter: webServiceAssembly.dateFormatter, imageRepository: imageLoadingAssembly.imageRepository)
     }
     
     func currentWeatherViewPresenter() -> CurrentWeatherPresenter {
-        return CurrentWeatherPresenter()
+        return CurrentWeatherPresenter(imageRepository: imageLoadingAssembly.imageRepository)
     }
     
     func repository() -> WeatherRepositoryProtocol {
