@@ -11,6 +11,7 @@ import Foundation
 internal enum Endpoint {
     case weather(city: String)
     case weatherCoordinates(lat: Double, long: Double)
+    case image(name: String)
 }
 
 internal extension Endpoint {
@@ -42,9 +43,12 @@ private extension Endpoint {
     var path: String {
         switch self {
         case .weather:
-            return "weather"
+            return "data/2.5/weather"
         case .weatherCoordinates:
-            return "weather"
+            return "data/2.5/weather"
+        case .image(let name):
+            return "img/2/\(name).png"
+            
         }
         
     }
@@ -57,6 +61,8 @@ private extension Endpoint {
                 "lat" : String(latitude),
                 "lon" : String(longitude)
             ]
+        case .image:
+            return [:]
         }
     }
 }

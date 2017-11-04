@@ -16,7 +16,7 @@ internal enum WebServiceError: Error {
 final internal class WebService {
     private let configuration: WebServiceConfiguration
     private let session = URLSession(configuration: .default)
-    private let baseURL = URL(string: "https://api.openweathermap.org/data/2.5")!
+    private let baseURL = URL(string: "https://api.openweathermap.org")!
     private let decoder = JSONDecoder()
     
     init(configuration: WebServiceConfiguration) {
