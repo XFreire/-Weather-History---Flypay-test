@@ -20,7 +20,7 @@ class WeatherTest: XCTestCase {
         
     }
     
-    func testWeatherResponseMapping() {
+    func testWeatherResponse_mapping_weatherModel() {
         let weather = Weather(weatherResponse: response)
         XCTAssertEqual(response.identifier, weather.identifier)
         XCTAssertEqual(response.coordinates.latitude, weather.latitude)
@@ -30,7 +30,25 @@ class WeatherTest: XCTestCase {
         XCTAssertEqual(response.description.first!.icon, weather.icon)
         XCTAssertEqual(String(response.date), weather.date)
         XCTAssertEqual(response.city, weather.city)
-        
+    }
+    
+    func testWeatherResponse_mapping_fromJSON() {
+        let bundle = Bundle(for: type(of: self))
+        if let file = bundle.url(forResource: "weather", withExtension: "json") {
+            do {
+                let data = try! Data(contentsOf: file)
+                let decoder = JSONDecoder()
+                let weatherResponse = try! decoder.decode(WeatherResponse.self, from: data)
+                XCTAssertEqual(weatherResponse.identifier, 2643743)
+                XCTAssertEqual(weatherResponse.coordinates.latitude, 51.51)
+                XCTAssertEqual(weatherResponse.coordinates.longitude, -0.13)
+                XCTAssertEqual(weatherResponse.description.first!.name, "Drizzle")
+                XCTAssertEqual(weatherResponse.description.first!.description, "light intensity drizzle")
+                XCTAssertEqual(weatherResponse.description.first!.icon, "09d")
+                XCTAssertEqual(weatherResponse.date, 1485789600)
+                XCTAssertEqual(weatherResponse.city, "London")
+            }
+        }
     }
     
     
