@@ -20,6 +20,7 @@ final class WeatherViewController: UIViewController {
     }
     
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     // MARK: - Properties
     private let presenter: WeatherPresenter
@@ -54,6 +55,7 @@ final class WeatherViewController: UIViewController {
 extension WeatherViewController {
     
     func update(withCurrentWeather weather: Weather) {
+        loadingView.stopAnimating()
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         let currentWeatherView = CurrentWeatherView.instantiate()
         currentWeatherPresenter.present(weather: weather, in: currentWeatherView)

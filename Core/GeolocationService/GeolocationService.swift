@@ -49,8 +49,13 @@ final class GeolocationService {
             .map { $0.coordinate }
         
         
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    func stopLocationUpdates() {
+        locationManager.stopUpdatingLocation()
     }
     
 }

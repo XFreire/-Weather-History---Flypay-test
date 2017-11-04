@@ -35,9 +35,12 @@ final class WeatherRepository: WeatherRepositoryProtocol {
     
     func weatherForCurrentPosition() -> Observable<Weather> {
         return geolocationService.location
-            .flatMap{ [weak self] coords in
+            .flatMapLatest{ [weak self] coords in
                 self?.weather(for: coords.latitude, longitude: coords.longitude) ?? Observable.empty()
             }
+            .do(onNext: { [weak self] _ in
+                self?.geolocationService.stopLocationUpdates()
+            })
         
     }
 }

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherViewController" customModule="Core" customModuleProvider="target">
             <connections>
+                <outlet property="loadingView" destination="DMn-s4-n3A" id="jFI-Vi-fUp"/>
                 <outlet property="stackView" destination="Zpw-cT-sp0" id="E6O-Cu-fax"/>
                 <outlet property="tableView" destination="jSR-fC-8h4" id="nHf-3G-D0E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -35,10 +36,15 @@
                         <outlet property="delegate" destination="-1" id="Dd4-Xt-0hE"/>
                     </connections>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DMn-s4-n3A">
+                    <rect key="frame" x="177.5" y="65" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="DMn-s4-n3A" firstAttribute="centerX" secondItem="Zpw-cT-sp0" secondAttribute="centerX" id="Fl0-mf-Btm"/>
                 <constraint firstItem="jSR-fC-8h4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MUW-oW-9Ng"/>
+                <constraint firstItem="DMn-s4-n3A" firstAttribute="centerY" secondItem="Zpw-cT-sp0" secondAttribute="centerY" id="Q9m-uZ-lt4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jSR-fC-8h4" secondAttribute="bottom" id="YiR-cL-M7I"/>
                 <constraint firstItem="Zpw-cT-sp0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YkN-Li-cz1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jSR-fC-8h4" secondAttribute="trailing" id="dY6-bL-beh"/>
