@@ -30,7 +30,6 @@ final internal class ImageRepository: ImageRepositoryProtocol {
     func image(at path: String) -> Observable<UIImage> {
         let imageManager = self.imageManager
         let request = Endpoint.image(name: path).request(with: URL(string: "https://api.openweathermap.org")!, adding: [:])
-        print(request.url!)
         return imageManager.image(withURL: request.url!)
     }
 }
